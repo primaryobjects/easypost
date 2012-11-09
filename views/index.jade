@@ -1,0 +1,31 @@
+extends layout
+
+block content
+	div.container
+		h1 EasyPost
+		p An example of reading POST data in node.js
+
+		h3 Description
+		.well
+			p This example shows how to read POST data from both a form submission, and a REST client. The code example uses a manager method. This helps abstract the extra work of using res.on('data') and res.on('end'). It also provides a single location for maintaing the code that reads POST data, allowing you to enhance it, such as with checks for flooding attacks, etc.
+			p We'll cover reading data from a form submissions and reading data submitted through a REST client (ie., streamed).
+
+		legend Example Form Post
+
+		form#myForm(method='post', action='/')
+			#formDiv(style='margin: 0 0 0 22px;')
+				.control-group
+					label.control-label(for='name') Name
+					.controls
+						input#txtName(type='text', name='txtName', class='span4', placeholder='Name')
+			.form-actions
+				button#btnSubmit.btn.btn-primary(type='submit') Submit
+
+		if txtName != null
+			h2 Thanks #{txtName}!
+
+block footer
+	script(type='text/javascript')
+		$(function() {
+			$('#txtName').focus();
+		});
