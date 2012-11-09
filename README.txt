@@ -6,6 +6,8 @@ This example shows how to read POST data from both a form submission, and a REST
 
 We'll cover reading data from a form submissions and reading data submitted through a REST client (ie., streamed).
 
+Demo @ http://easypost.herokuapp.com
+ 
 Reading POST Data From a Form
 
     CommonManager.getPostData(req, res, function (data) {
