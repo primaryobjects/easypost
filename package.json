@@ -1,10 +1,13 @@
 {
+  "author": "Kory Becker",
   "name": "easypost",
+  "description": "Read POST data in node.js from a form submission or REST client, using the easy manager method getPostData().",
   "version": "0.0.1",
   "dependencies": {
     "express": "3.0.0rc1",
     "jade": "*",
-    "stylus": "*"
+    "stylus": "*",
+	"easypost": "*"
   },
   "engines": {
     "node": "0.8.x",
